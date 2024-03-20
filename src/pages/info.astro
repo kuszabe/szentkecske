@@ -1,0 +1,155 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Népesség from "../images/adatok/népesség.png";
+import Vallás from "../images/adatok/vallás.png";
+import Etnika from "../images/adatok/etnikum.png"
+---
+
+<Layout title="Információ">
+    <h1>Közérdekű adatok Szentkecskéről</h1>
+
+    <ul class="w3-ul w3-section">
+        <li><b>Intézmények</b></li>
+        <li>Templom</li>
+        <li>Polgármesteri hivatal</li>
+        <li>Rom vár</li>
+        <li>Juhász Béla emlékmű</li>
+        <li>Buszmegálló - 1010 busz</li>
+        <li>Szentkecskei posta</li>
+        <li>Szentkecskei piac</li>
+        <li>Érsekvadkert - Petőfi Sándor általános iskola</li>
+        <li>Érsekvadkert - gyógyszertár</li>
+        <li>Érsekvadkert - fogászat</li>
+        <li>Érsekvadkert - orvosi rendelő</li>
+    </ul>
+    <ul class="w3-ul w3-section">
+        <li><b>Munkalehetőségek</b></li>
+        <li>Földművelés</li>
+        <li>Posta</li>
+        <li>Piac</li>
+        <li>Önkormányzat</li>
+        <li>Bolt</li>
+    </ul>
+
+    <h3>Demográfiai adatok</h3>
+
+    <Image src={Népesség} alt="Szentkecske népessége idő és kor szerint" title="Szentkecske népessége idő és kor szerint" class="w3-image"></Image>
+    <table class="w3-table w3-section w3-table-all">
+        <tr>
+            <th></th>
+            <th>0-18</th>
+            <th>18-40</th>
+            <th>40-65</th>
+            <th>65+</th>
+          </tr>
+          <tr>
+            <td>1900</td>
+            <td>32</td>
+            <td>28</td>
+            <td>24</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>1910</td>
+            <td>32</td>
+            <td>26</td>
+            <td>25</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>1920</td>
+            <td>30</td>
+            <td>27</td>
+            <td>26</td>
+            <td>17</td>
+          </tr>
+          <tr>
+            <td>1930</td>
+            <td>30</td>
+            <td>31</td>
+            <td>24</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>1940</td>
+            <td>29</td>
+            <td>32</td>
+            <td>23</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>1950</td>
+            <td>28</td>
+            <td>32</td>
+            <td>25</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>1960</td>
+            <td>27</td>
+            <td>33</td>
+            <td>24</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <td>1970</td>
+            <td>27</td>
+            <td>32</td>
+            <td>23</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>1980</td>
+            <td>25</td>
+            <td>30</td>
+            <td>25</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>1980</td>
+            <td>23</td>
+            <td>28</td>
+            <td>26</td>
+            <td>23</td>
+          </tr>
+          <tr>
+            <td>1990</td>
+            <td>21</td>
+            <td>27</td>
+            <td>28</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>2000</td>
+            <td>20</td>
+            <td>25</td>
+            <td>30</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>2010</td>
+            <td>18</td>
+            <td>23</td>
+            <td>33</td>
+            <td>26</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td>17</td>
+            <td>22</td>
+            <td>35</td>
+            <td>26</td>
+          </tr>
+    </table>
+
+
+    <Image src={Vallás} alt="Szentkecske vallásainak megoszlása" title="Szentkecske vallásainak megoszlása" class="w3-image"></Image>
+    <table class="w3-table w3-section w3-table-all">
+        <tr><th>Római katolikus</th><th>Evangélikus</th><th>Református</th></tr>
+        <tr><td>64</td><td>32</td><td>5</td></tr>
+    </table>
+    
+    <Image src={Etnika} alt="Szentkecske etnikuma" title="Szentkecske etnikuma" class="w3-image"></Image>
+
+</Layout>

@@ -1,0 +1,37 @@
+---
+const newslist = [
+    {title: "Önkormányzati választások",date:"2024-03-16", text:`
+        Június 9-én tartják az önkormányzati választásokat, Szentkecske jelöltjei ismét megmozgató beszédeket mondtak, hogy a falut továbbfejleszthessék és emlékeztessék az embereket, hogy milyen szentkecskei polgárnak lenni. 
+        <br/>
+        A jelöltek:<br/>
+        Lakatos Bendegúz - Fidesz-KDNP<br/>
+        Czinege Zsombor - Független jelölt<br/>
+        <br/>
+        Lakatos Bendegúz ígéri, hogy folytatni fogja az eddigi példás munkáját, ami Szentkecske felemelkedéséhez vezetett. Lakatos Bendegúz már korábban is egy népszerű jelölt volt, de inspiráló beszédével még több potenciális szavazóra tett szert. <br/>
+        <br/>
+        Czinege Zsombor pedig újra indult 2006 óta, most már független jelöltként. Sokan aggódnak, mivel a Szociáldemokrata párt tagja volt, ezért ismét visszahozná Magyarországot a Gyurcsány-korszakba. Czinege Zsombor ezeket a vádakat letagadta és helyette Szentkecske infrastruktúrájának fejlesztését folytatná, amit eddig Lakatos Bendegúz elhanyagolt. <br/>
+    `},
+    {title: "Kecskefesztivál",date:"2024-03-08", text:`
+        Múlthéten tartották a szentkecskei Kecskevesztivált, ami amellett, hogy egy jókedvű, élménydús esemény, a kulisszák mögött arra koncentrál, hogy fejlessze a falu gazdaságát és kulturális állapotát különböző érdekes programokkal. <br/>
+        <br/>  
+        A fesztivál egyik főpontja az volt, hogy a gyerek érdeklődési körét tágítsák és bemutassanak nekik különböző életstílust a falun kívül. Tudj meg többet itt: kecskefesztival.hu <br/>
+    `},
+    {title: "Szentkecske népességjelentés",date:"2024-03-01", text:`
+    A 2024-es szentkecskei népszámlálás adataiból egyre tisztább következtetéseket lehet levonni. A falu polgármestere, Lakatos Bendegúz kijelentette, hogy a falu elöregedő és már évtizedek óta csökken a fiatalok száma a faluban. <br/>
+
+"A faluból egyre többen vándorolnak ki, csak az idősek maradnak, akik egyedül nem tudják magukat gondozni és magányossá válnak az idők során." - Lakatos Bendegúz <br/>
+
+    `},
+]
+---
+
+{newslist.map((item) => (
+    <div class="w3-panel w3-card">
+        <h2>{item.title}</h2>
+        <span class="w3-small w3-text-gray">{item.date}</span>
+        <p set:html={item.text}></p>
+    </div>
+))}
+
+<style>
+</style>

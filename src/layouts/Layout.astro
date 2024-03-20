@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+let color = "w3-blue";
 ---
 
 <!doctype html>
@@ -15,37 +17,63 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link
+			rel="stylesheet"
+			href="https://www.w3schools.com/w3css/4/w3.css"
+		/>
 	</head>
 	<body>
-		<slot />
+		<nav class:list={["w3-bar", color, "w3-center"]}>
+			<img
+				src="./picsart.png"
+				style="height: 3em;"
+				class="w3-left"
+				alt="Picasrt"
+				title="Szépség"
+				loading="eager"
+			/>
+			<a href="/" class="w3-bar-item w3-large w3-button"><b>Szentkecske</b></a>
+			<a href="/info" class="w3-bar-item w3-button w3-large">Információ</a>
+			<a href="/hirek" class="w3-bar-item w3-button w3-large">Hírek</a>
+			<a href="/tortenelem" class="w3-bar-item w3-button w3-large">Történelem</a>
+			<a href="/terkep" class="w3-bar-item w3-button w3-large">Térkép</a>
+			<a href="/ugyintezes" class="w3-bar-item w3-button w3-large">Ügyintézés</a>
+		</nav>
+		<div class="w3-content w3-container">
+			<slot />
+		</div>
+		<!-- <footer class:list={[color, "w3-container", "w3-center"]}>
+			<div class="w3-row w3-panel">
+				<div class="w3-quarter">
+					<a href="/onkormanyzat">Önkormányzat</a>
+				</div>
+				<div class="w3-quarter">
+					<b>Option 1</b>
+					<p>Option 2</p>
+					<p>Option 3</p>
+					<p>Option 4</p>
+				</div>
+				<div class="w3-quarter">
+					<b>Option 1</b>
+					<p>Option 2</p>
+					<p>Option 3</p>
+					<p>Option 4</p>
+				</div>
+				<div class="w3-quarter">
+					<b>Option 1</b>
+					<p>Option 2</p>
+					<p>Option 3</p>
+					<p>Option 4</p>
+				</div>
+			</div>
+		</footer> -->
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+<style>
+	@media screen and (max-width: 601px) {
+		.w3-row-padding > div {
+			margin-bottom: 10px;
+		}
 	}
 </style>

@@ -1,0 +1,48 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+const color = "w3-blue"
+---
+
+<Layout title="Ügyintézés">
+    <div class="w3-row-padding w3-container w3-section">
+        <div class:list={["w3-half", "w3-card w3-round", color]}>
+            <h1>Önkormányzat</h1>
+            <p>Szentkecske polgármestere: Lakatos Bendegúz</p>
+            <p>Közgyűlési tagok:
+                Karácsony Viktor,
+                Tibor Antal,
+                Kis Atilla,
+                Beles Gábor
+            </p>
+            <p>
+                Telefon: 06-35-123-4562<br>
+                Levelezési cím: 2660 Szentkecske, Kossuth Lajos utca 3
+            </p>
+            <p>
+                Ha ügyeit személyesen szeretné intézni, akkor fáradjon el az Önkormányzat épületébe a Kossuth Lajos utca 3 címen.
+            </p>
+        </div>
+        <div class="w3-half">
+            <section class="w3-section">
+                <h1>E-Ügyintézés</h1>
+                <p>Ügyeit intézheti online is Szentkecske E-Ügyintézési felületén!</p>
+                <a href="https://ugyfelkapu.gov.hu/" class="w3-button w3-blue w3-block w3-center">Belépés</a>
+            </section>
+        </div>
+    </div>
+    <form class="w3-container">
+        <h3>Valami észrevétele van?</h3>
+        <div class="w3-row-padding w3-stretch w3-section">
+            <div class="w3-half">
+                <input type="text" placeholder="Keresztnév" class="w3-border w3-input">
+            </div>
+            <div class="w3-half">
+                <input type="text" placeholder="Családnév" class="w3-border w3-input">
+            </div>
+        </div>
+        <input type="text" placeholder="Email vagy telefon" class="w3-border w3-section w3-input">
+        <textarea name="Észrevétel" class="w3-input w3-border w3-section" placeholder="Ide írhatja üzenetét" id="note"></textarea>
+        <button class="w3-button w3-blue w3-block w3-center">Beküldés</button>
+    </form>
+</Layout>
